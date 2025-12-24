@@ -13,8 +13,8 @@ const Navbar: React.FC = () => {
           </Link>
           <div className="flex items-center space-x-6 md:space-x-12">
             <Link to="/" className="text-[10px] md:text-xs font-black text-stone-400 hover:text-stone-900 transition-colors uppercase tracking-[0.2em] hidden xs:block">Home</Link>
-            <Link 
-              to="/know-your-farmer" 
+            <Link
+              to="/knowyourfarmer"
               className="px-8 py-3.5 md:px-10 md:py-4 bg-stone-900 text-white text-[10px] md:text-xs font-black rounded-full shadow-lg hover:shadow-xl hover:bg-yellow-500 transition-all active:scale-95 uppercase tracking-[0.2em]"
             >
               Know Your Farmer
