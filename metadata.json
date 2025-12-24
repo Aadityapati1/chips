@@ -1,0 +1,8 @@
+
+{
+  "name": "Safary Banana Chips",
+  "description": "A premium farm-to-table banana chips brand from Burhanpur, MP. Trace your snack's journey from the farm to your pack.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
