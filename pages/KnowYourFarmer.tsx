@@ -103,6 +103,15 @@ const KnowYourFarmer: React.FC = () => {
             {data.farmerName}
           </h1>
           <p className="text-stone-600 text-xl md:text-3xl font-medium tracking-tight">📍 {data.location} • {data.harvestDate}</p>
+          {data.images && data.images[1] && (
+            <div className="absolute -top-12 right-6 md:-top-16 md:right-12">
+              <img
+                src={data.images[1]}
+                alt={`${data.farmerName} portrait`}
+                className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover border-4 border-white shadow-2xl"
+              />
+            </div>
+          )}
         </div>
       </section>
 
@@ -115,16 +124,7 @@ const KnowYourFarmer: React.FC = () => {
             <p className="text-stone-600 text-xl md:text-2xl leading-relaxed mb-12 italic font-medium">
               "{data.farmStory}"
             </p>
-            <div className="grid grid-cols-2 gap-10 pt-10 border-t border-stone-100">
-               <div className="hover:translate-x-1 transition-transform">
-                 <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-3">Variety</p>
-                 <p className="text-xl font-black text-stone-900">{data.variety}</p>
-               </div>
-               <div className="hover:translate-x-1 transition-transform">
-                 <p className="text-[10px] font-black text-stone-400 uppercase tracking-widest mb-3">Produced By</p>
-                 <p className="text-xl font-black text-stone-900">Vedant Kela Chips</p>
-               </div>
-            </div>
+            
           </div>
 
           <div className="py-8">
