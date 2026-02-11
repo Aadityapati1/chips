@@ -89,7 +89,7 @@ const KnowYourFarmer: React.FC = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-32 px-6 bg-stone-100 overflow-hidden">
+      <section className="relative py-28 px-6 bg-stone-100 overflow-hidden">
         {/* <div className="absolute inset-0 opacity-20 hover:opacity-40 transition-all duration-1000">
            <img 
             src="https://images.unsplash.com/photo-1594488311340-9856f7e8a93e?auto=format&fit=crop&q=80&w=1400" 
@@ -103,26 +103,27 @@ const KnowYourFarmer: React.FC = () => {
             {data.farmerName}
           </h1>
           <p className="text-stone-600 text-xl md:text-3xl font-medium tracking-tight">📍 {data.location} • {data.harvestDate}</p>
-          {data.images && data.images[1] && (
-            <div className="absolute -top-12 right-6 md:-top-16 md:right-12">
-              <img
-                src={data.images[1]}
-                alt={`${data.farmerName} portrait`}
-                className="w-32 h-32 md:w-44 md:h-44 rounded-full object-cover border-4 border-white shadow-2xl"
-              />
-            </div>
-          )}
+          {/* portrait removed from hero overlay; rendered below the hero section */}
         </div>
       </section>
+
+      {/* Farmer portrait between hero and story */}
+      {data.images && data.images[1] && (
+        <div className="max-w-5xl mx-auto -mt-16 mb-12 flex justify-center z-10 relative">
+          <div className="w-56 md:w-72 h-56 md:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+            <img src={data.images[1]} alt={`${data.farmerName} portrait`} className="w-full h-full object-cover" />
+          </div>
+        </div>
+      )}
 
       {/* Story Content */}
       <section className="py-24 px-6 bg-[#FFFDF5] overflow-hidden">
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
-          <div className="bg-white p-12 md:p-16 rounded-[4rem] shadow-2xl border border-stone-100 relative animate-reveal-right reveal-hidden">
+          <div className="bg-white p-8 md:p-12 rounded-[4rem] shadow-2xl border border-stone-100 relative animate-reveal-right reveal-hidden">
             <div className="absolute top-12 right-12 text-7xl opacity-5 text-stone-900">❝</div>
-            <h2 className="text-3xl font-serif font-black text-stone-900 mb-10 tracking-tight">Farmer's Inspiration</h2>
-            <p className="text-stone-600 text-xl md:text-2xl leading-relaxed mb-12 italic font-medium">
-              "{data.farmStory}"
+            
+            <p className="text-stone-600 text-base md:text-lg leading-relaxed mb-12 font-normal">
+              {data.farmStory}
             </p>
             
           </div>
