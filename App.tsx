@@ -5,11 +5,13 @@ import Home from './pages/Home';
 import KnowYourFarmer from './pages/KnowYourFarmer';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
+        <ScrollToTop />
         <Navbar />
         <main className="flex-grow">
           <Routes>
