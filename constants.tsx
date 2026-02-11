@@ -22,11 +22,13 @@ Farming is filled with uncertainties, unpredictable weather, fluctuating market 
 
 ⸻
 
-❤️ From Mohan’s Farm To Your Packet
+❤️ 
+
+From Mohan’s Farm To Your Packet
 
 When you enjoy these banana chips, you are not just tasting a snack - you are becoming part of Mohan Patil’s story, his dedication, and his year-long journey of care and commitment.`,
     images: [
-      '/assets/farmers/12345/mohan1.jpeg',
+      // '/assets/farmers/12345/mohan1.jpeg',
       '/assets/farmers/12345/mohan2.jpeg',
       '/assets/farmers/12345/mohanfarm1.jpeg'
 
