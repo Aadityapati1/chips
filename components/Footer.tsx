@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
           <div className="col-span-1 md:col-span-1">
             <h3 className="font-brand text-stone-900 text-3xl font-extrabold tracking-tighter mb-6">SAFARY</h3>
             <p className="max-w-xs text-sm leading-relaxed mb-6 text-stone-500">
-              Made from the finest bananas, sourced directly from the heart of India's farms in Burhanpur. Khate hi safar shuru.
+              Made from the finest bananas, sourced directly from the heart of India's farms in Burhanpur.
             </p>
             <div className="flex items-center space-x-4">
               <span className="bg-stone-200 px-3 py-1 rounded text-[10px] font-bold text-stone-700">FSSAI: 21422570000458</span>
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 </span> @safary.banana
               </p>
               <p className="flex items-center gap-2 text-xs leading-relaxed text-stone-500">
-                <span className="text-yellow-600">📍</span> Phophnar, Burhanpur (East Nimar)<br/>Madhya Pradesh - 450445
+                <span className="text-yellow-600">📍</span> Burhanpur (East Nimar)<br/>Madhya Pradesh - 450445
               </p>
             </div>
           </div>

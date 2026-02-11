@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import packCream from '../file_000000005cbc71fda2e8c3be23b50d01.png';
-import packPeri from '../file_0000000077dc71fd85549ad933e19c66.png';
+import packPeri from '../periperi-removebg-preview.png';
+import packCream from '../cream_onion-removebg-preview.png';
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -74,7 +74,7 @@ const Home: React.FC = () => {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-400/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:scale-150 transition-transform duration-1000"></div>
                  <h3 className="text-3xl font-serif font-black text-stone-900 mb-8">Our Promise</h3>
                  <p className="text-stone-500 mb-10 italic text-xl leading-relaxed">
-                  "Snacking should be transparent. Every bag of Safary is a journey back to the farmers of Phophnar who grew your bananas with care."
+                  "Snacking should be transparent. Every bag of Safary is a journey back to the farmers of Burhanpur who grew your bananas with care."
                  </p>
                  <div className="h-px w-full bg-stone-200 mb-10 group-hover:bg-yellow-400 transition-colors duration-500"></div>
                  <div className="flex justify-between items-center text-center">
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
                       <p className="text-[10px] uppercase font-bold text-stone-400 mt-2 tracking-widest">MRP</p>
                     </div>
                     <div className="hover:scale-110 transition-transform cursor-default">
-                      <p className="text-3xl font-black text-stone-900">50g</p>
+                      <p className="text-3xl font-black text-stone-900">40g</p>
                       <p className="text-[10px] uppercase font-bold text-stone-400 mt-2 tracking-widest">Net Qty</p>
                     </div>
                     <div className="hover:scale-110 transition-transform cursor-default">

@@ -47,7 +47,7 @@ const KnowYourFarmer: React.FC = () => {
               placeholder="Batch ID (try 12345)"
               value={searchVal}
               onChange={(e) => setSearchVal(e.target.value)}
-              className="w-full px-10 py-7 rounded-[2rem] border-2 border-stone-200 bg-white focus:bg-white focus:border-yellow-400 outline-none transition-all text-3xl font-black text-center text-stone-900 shadow-xl placeholder:text-stone-300"
+              className="w-full px-6 md:px-10 py-5 md:py-7 rounded-[2rem] border-2 border-stone-200 bg-white focus:bg-white focus:border-yellow-400 outline-none transition-all text-2xl md:text-3xl font-black text-center text-stone-900 shadow-xl placeholder:text-lg md:placeholder:text-3xl placeholder:text-stone-300"
             />
             <button
               type="submit"
@@ -90,13 +90,13 @@ const KnowYourFarmer: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative py-32 px-6 bg-stone-100 overflow-hidden">
-        <div className="absolute inset-0 opacity-20 hover:opacity-40 transition-all duration-1000">
+        {/* <div className="absolute inset-0 opacity-20 hover:opacity-40 transition-all duration-1000">
            <img 
             src="https://images.unsplash.com/photo-1594488311340-9856f7e8a93e?auto=format&fit=crop&q=80&w=1400" 
             className="w-full h-full object-cover animate-fade-in"
             alt="Burhanpur Farm"
            />
-        </div>
+        </div> */}
         <div className="relative z-10 max-w-5xl mx-auto animate-reveal-up">
           <span className="inline-block px-4 py-2 bg-yellow-400 text-stone-900 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] mb-6 shadow-xl animate-scale-in delay-200 reveal-hidden">Batch #{data.batchId}</span>
           <h1 className="text-6xl md:text-9xl font-serif font-black text-stone-900 mb-6 tracking-tight leading-none">
@@ -128,19 +128,17 @@ const KnowYourFarmer: React.FC = () => {
           </div>
 
           <div className="py-8">
-            <h2 className="text-4xl font-serif font-black text-stone-900 mb-16 tracking-tight animate-reveal-up reveal-hidden">From Field to Pack</h2>
-            <div className="space-y-16">
-              {data.processSteps.map((step, idx) => (
-                <div key={idx} className={`flex gap-8 group animate-reveal-up reveal-hidden`} style={{ animationDelay: `${(idx + 1) * 200}ms` }}>
-                  <div className="flex-shrink-0 w-20 h-20 bg-white rounded-3xl flex items-center justify-center text-4xl shadow-xl border border-stone-100 transition-all group-hover:scale-110 group-hover:bg-yellow-400 group-hover:border-yellow-400 group-hover:rotate-6">
-                    {step.icon}
+            <h2 className="text-4xl font-serif font-black text-stone-900 mb-16 tracking-tight animate-reveal-up reveal-hidden">Photos From The Farm</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {data.images && data.images.length ? (
+                data.images.map((src, idx) => (
+                  <div key={idx} className="rounded-2xl overflow-hidden shadow-2xl animate-reveal-up reveal-hidden" style={{ animationDelay: `${(idx + 1) * 120}ms` }}>
+                    <img src={src} alt={`${data.farmerName} photo ${idx + 1}`} className="w-full h-72 object-cover" />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-stone-900 mb-3 uppercase tracking-tight leading-none group-hover:text-yellow-600 transition-colors">{step.title}</h3>
-                    <p className="text-stone-500 text-lg leading-relaxed font-medium">{step.description}</p>
-                  </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                <p className="text-stone-500">No photos available for this batch.</p>
+              )}
             </div>
           </div>
         </div>

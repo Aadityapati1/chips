@@ -4,6 +4,7 @@ export interface FarmerData {
   farmerName: string;
   location: string;
   farmStory: string;
+  images?: string[];
   harvestDate: string;
   variety: string;
   flavour: 'Peri-Peri' | 'Cream & Onion';
