@@ -9,6 +9,8 @@ const KnowYourFarmer: React.FC = () => {
   const [searchVal, setSearchVal] = useState(batchId || '');
   const [error, setError] = useState(false);
 
+  const profile  = '/assets/farmers/12345/mohan1.jpeg';
+
   useEffect(() => {
     if (batchId && BATCH_DATA[batchId]) {
       setData(BATCH_DATA[batchId]);
@@ -110,8 +112,8 @@ const KnowYourFarmer: React.FC = () => {
       {/* Farmer portrait between hero and story */}
       {data.images && data.images[1] && (
         <div className="max-w-5xl mx-auto -mt-16 mb-12 flex justify-center z-10 relative">
-          <div className="w-56 md:w-72 h-56 md:h-72 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-            <img src={data.images[1]} alt={`${data.farmerName} portrait`} className="w-full h-full object-cover" />
+          <div className="w-64 md:w-80 h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+            <img src={profile} alt={`${data.farmerName} portrait`} className="w-full h-full object-cover" />
           </div>
         </div>
       )}
